@@ -71,7 +71,7 @@ Também ama fotografia, leitura e momentos tranquilos para relaxar e aproveitar 
         """, unsafe_allow_html=True)
 
     st.markdown("<div style='margin-top:30px;'>", unsafe_allow_html=True)
-    st.link_button("Acessar", "http://lattes.cnpq.br/4494611683890258")
+    st.link_button("Acessar", "https://sites.google.com/d/1I86KKTtO5lHEQ5UCQbhZElQLa4axHyxL/p/1VBaw2kBCL66JRltCMmyUHavoiOfeF_4_/edit?pli=1")
     st.markdown("</div>", unsafe_allow_html=True)
 
 with col_right:
@@ -80,7 +80,7 @@ with col_right:
 # 🔥 NOVO BLOCO (WhatsApp clicável no final)
 st.markdown(f"""
     <div style="text-align: center; margin-top: 10px;">
-        <a href="https://wa.me/5583998234415" target="_blank">
+        <a href="https://wa.me/5583987262408" target="_blank">
             <img src="data:image/png;base64,{zap_base64}" width="100">
         </a>
     </div>
