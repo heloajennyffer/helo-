@@ -10,47 +10,24 @@ st.title("🌐 Empresas Parceiras")
 col1, col2, col3 = st.columns(3)
 
 # =========================
-# WEPINK
+# SPACEX
 # =========================
 with col1:
-    st.image("wepink.png", width=250)
-
-    st.subheader("💄 WePink")
-
-    st.write("""
-    Marca de beleza e cosméticos conhecida pelos seus produtos modernos,
-    femininos e de alta qualidade.
-    """)
-
-    st.link_button(
-        "Acessar Site",
-        "https://wepink.com.br/"
-    )
-
-# =========================
-# SHEIN
-# =========================
-with col2:
-    st.image("shein.png", width=250)
-
-    st.subheader("🛍️ SHEIN")
+    st.image("spacex.png")
+    st.subheader("🚀 SpaceX")
 
     st.write("""
-    Loja online de moda famosa pelas tendências atuais,
-    roupas estilosas e preços acessíveis.
+    Empresa aeroespacial criada por Elon Musk.
+    Atua no desenvolvimento de foguetes e viagens espaciais.
     """)
 
-    st.link_button(
-        "Acessar Site",
-        "https://br.shein.com/"
-    )
+    st.link_button("Acessar Site", "https://www.spacex.com/")
 
 # =========================
 # APPLE
 # =========================
-with col3:
-    st.image("apple.png", width=250)
-
+with col2:
+    st.image("apple.png")
     st.subheader("🍎 Apple")
 
     st.write("""
@@ -58,7 +35,18 @@ with col3:
     como iPhone, iPad e MacBook.
     """)
 
-    st.link_button(
-        "Acessar Site",
-        "https://www.apple.com/br/"
-    )
+    st.link_button("Acessar Site", "https://www.apple.com/br/")
+
+# =========================
+# NETFLIX
+# =========================
+with col3:
+    st.image("netflix.png")
+    st.subheader("🎬 Netflix")
+
+    st.write("""
+    Plataforma de streaming com filmes, séries e documentários
+    assistidos no mundo inteiro.
+    """)
+
+    st.link_button("Acessar Site", "https://www.netflix.com/br/")
