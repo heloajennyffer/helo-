@@ -10,24 +10,56 @@ st.title("🌐 Empresas Parceiras")
 col1, col2, col3 = st.columns(3)
 
 # =========================
-# SPACEX
+# WEPINK
 # =========================
 with col1:
-    st.image("spacex.png")
-    st.subheader("🚀 SpaceX")
+    try:
+        st.image("wepink.png", width=250)
+    except:
+        st.warning("Imagem wepink.png não encontrada")
+
+    st.subheader("💄 WePink")
 
     st.write("""
-    Empresa aeroespacial criada por Elon Musk.
-    Atua no desenvolvimento de foguetes e viagens espaciais.
+    Marca de beleza e cosméticos conhecida pelos seus produtos modernos
+    e femininos.
     """)
 
-    st.link_button("Acessar Site", "https://www.spacex.com/")
+    st.link_button(
+        "Acessar Site",
+        "https://wepink.com.br/"
+    )
+
+# =========================
+# SHEIN
+# =========================
+with col2:
+    try:
+        st.image("shein.png", width=250)
+    except:
+        st.warning("Imagem shein.png não encontrada")
+
+    st.subheader("🛍️ SHEIN")
+
+    st.write("""
+    Loja online de moda famosa pelas tendências atuais
+    e preços acessíveis.
+    """)
+
+    st.link_button(
+        "Acessar Site",
+        "https://br.shein.com/"
+    )
 
 # =========================
 # APPLE
 # =========================
-with col2:
-    st.image("apple.png")
+with col3:
+    try:
+        st.image("apple.png", width=250)
+    except:
+        st.warning("Imagem apple.png não encontrada")
+
     st.subheader("🍎 Apple")
 
     st.write("""
@@ -35,18 +67,7 @@ with col2:
     como iPhone, iPad e MacBook.
     """)
 
-    st.link_button("Acessar Site", "https://www.apple.com/br/")
-
-# =========================
-# NETFLIX
-# =========================
-with col3:
-    st.image("netflix.png")
-    st.subheader("🎬 Netflix")
-
-    st.write("""
-    Plataforma de streaming com filmes, séries e documentários
-    assistidos no mundo inteiro.
-    """)
-
-    st.link_button("Acessar Site", "https://www.netflix.com/br/")
+    st.link_button(
+        "Acessar Site",
+        "https://www.apple.com/br/"
+    )
