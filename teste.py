@@ -1,87 +1,64 @@
 import streamlit as st
-import base64
 
 # CONFIG
-st.set_page_config(page_title="Perfil", layout="wide")
+st.set_page_config(page_title="Empresas Parceiras", layout="wide")
 
-# FUNÇÃO base64
-def get_base64_image(path):
-    with open(path, "rb") as img_file:
-        return base64.b64encode(img_file.read()).decode()
+# TÍTULO
+st.title("🌐 Empresas Parceiras")
 
-img_base64 = get_base64_image("apple.png")
-zap_base64 = get_base64_image("wpp.png")
+# COLUNAS
+col1, col2, col3 = st.columns(3)
 
-# TOPO (imagem clicável)
-col1, col2, col3 = st.columns([1,2,1])
+# =========================
+# WEPINK
+# =========================
+with col1:
+    st.image("wepink.png", width=250)
 
+    st.subheader("💄 WePink")
+
+    st.write("""
+    Marca de beleza e cosméticos conhecida pelos seus produtos modernos,
+    femininos e de alta qualidade.
+    """)
+
+    st.link_button(
+        "Acessar Site",
+        "https://wepink.com.br/"
+    )
+
+# =========================
+# SHEIN
+# =========================
 with col2:
-    st.markdown(f"""
-        <div style="text-align: center; margin-bottom: 50px;">
-            <a href="https://www.apple.com/br/store?afid=p240%7Cgo~cmp-21356792355~adg-167133564910~ad-798954974537_kwd-10778630~dev-c~ext-~prd-~mca-~nt-search&cid=aos-br-kwgo-txt-brand-brand-brand-generic-announce-030206-" target="_blank">
-                <img src="data:image/png;base64,{img_base64}" 
-                     width="320" 
-                     style="border-radius:12px;">
-            </a>
-        </div>
-    """, unsafe_allow_html=True)
+    st.image("shein.png", width=250)
 
-# LAYOUT PRINCIPAL
-col_left, col_right = st.columns([3,1])
+    st.subheader("🛍️ SHEIN")
 
-with col_left:
-    st.markdown("""
-    <div style='margin-bottom:30px; font-size:30px;'>
-        <b>Nome Heloá</b>
-    </div>
-    """, unsafe_allow_html=True)
+    st.write("""
+    Loja online de moda famosa pelas tendências atuais,
+    roupas estilosas e preços acessíveis.
+    """)
 
-    # subcolunas
-    subcol1, subcol2 = st.columns([1,4])
+    st.link_button(
+        "Acessar Site",
+        "https://br.shein.com/"
+    )
 
-    # IMAGEM (centralizada verticalmente)
-    with subcol1:
-        st.markdown("""
-        <div style="
-            display: flex;
-            align-items: center;
-            height: 100%;
-        ">
-        """, unsafe_allow_html=True)
+# =========================
+# APPLE
+# =========================
+with col3:
+    st.image("apple.png", width=250)
 
-        st.image("loh.jpeg", width=800)
+    st.subheader("🍎 Apple")
 
-        st.markdown("</div>", unsafe_allow_html=True)
+    st.write("""
+    Empresa mundialmente conhecida pelos seus produtos tecnológicos,
+    como iPhone, iPad e MacBook.
+    """)
 
-    # TEXTO
-    with subcol2:
-        st.markdown("""
-        <div style="
-            text-align: justify;
-            font-size: 20px;
-            line-height: 2.0;
-            width: 100%;
-            max-width: none;
-        ">
-            <b>Sobre Heloá:<br>
-Heloá Jennyffer é uma pessoa divertida, carinhosa e criativa. Gosta de ouvir música, assistir séries, sair com amigos e conhecer lugares novos. 
-Também ama fotografia, leitura e momentos tranquilos para relaxar e aproveitar a vida.
-
-        </div>
-        """, unsafe_allow_html=True)
-
-    st.markdown("<div style='margin-top:30px;'>", unsafe_allow_html=True)
-    st.link_button("Acessar", "https://sites.google.com/d/1I86KKTtO5lHEQ5UCQbhZElQLa4axHyxL/p/1VBaw2kBCL66JRltCMmyUHavoiOfeF_4_/edit?pli=1")
-    st.markdown("</div>", unsafe_allow_html=True)
-
-with col_right:
-    st.empty()
-
-# 🔥 NOVO BLOCO (WhatsApp clicável no final)
-st.markdown(f"""
-    <div style="text-align: center; margin-top: 10px;">
-        <a href="https://wa.me/5583987262408" target="_blank">
-            <img src="data:image/png;base64,{zap_base64}" width="100">
-        </a>
-    </div>
-""", unsafe_allow_html=True)
+    st.link_button(
+        "Acessar Site",
+        "https://www.apple.com/br/"
+    )
